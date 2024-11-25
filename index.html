@@ -87,17 +87,26 @@
             </table>
         </div>
 
-        <p> (intro for interactive data)</p>
 
             <div class = 'center'>
                 <iframe src="survival_by_grade_race_heatmap.html" width="80%" height="400px" frameborder="0"></iframe>
             </div>
             
             <p>
-                <!--- descrption -->
+                The interactive heatmap for survival, race, and grade provides valuable insights into the relationship between these variables and the survival outcomes of 
+                breast cancer patients. By visualizing how survival months correlate with different races and grades, potential trends in the survival outcomes based on the 
+                severity of the cancer (as indicated by grade) and racial groups can be observed. For instance, the heatmap might reveal that patients with higher-grade cancers 
+                tend to have shorter survival times, while differences in survival could emerge across racial groups, possibly reflecting variations in access to healthcare, 
+                genetic factors, or other socio-economic influences. The interactivity allows users to filter by grade or race, enabling a deeper exploration of these patterns, 
+                and could highlight outliers or clusters that require further investigation. Based on the visualization provided, it is evident that a majority of patients 
+                (diagnosed with breast cancer in grades 1, 2, or 3) have higher survival rates (ranging from 60 to 70 months after diagnosis). Furthermore, discrepancies begin 
+                to appear in grade 4 data, where patients that do not identify as black or white only report about 0 survival months. The significant difference in data is 
+                followed by white patients surviving nearly 67 months, while black patients survive for approximately 49 months after diagnosis. These findings may prompt 
+                further clinical research into the impact of race and grade on survival, in order to develop more personalized forms of treatment for patients.
+
             </p>
 
-        <h3>Header for next data visual</h3>
+        <h3>Survival Months by Stage</h3>
         
         <div class = 'container'>
             <div class = 'image'>
@@ -105,13 +114,13 @@
                 <iframe src="survival_months_by_stage.svg" width="100%" height="400px" frameborder="0"></iframe>
             </div>
             <div class = 'text'>
-                <p>                <!--- descrption -->
+                <p>               
 
                 </p>
             </div>            
         </div>
         
-        <h3> Header for next data visual</h3>
+        <h3>Survival Months by Race</h3>
 
         <div class = 'container'>
             <div class = 'text'>
@@ -134,10 +143,18 @@
             <iframe src="scatter_plot.html" width="85%" height="550px" frameborder="0"></iframe>
         </div>
 
-        <h3><--Title --></h3>
+        <h3>Interactive Boxplot</h3>
 
         <p>
-            interactive explanation
+            The interactive box plot comparing regional nodes examined and regional nodes positive across different grades provides significant insights into how lymph node 
+            involvement relates to tumor grade. Based on the box plot provided, the presence of a greater number of examined regional nodes (for grades 2 and 3) is fairly evident, 
+            followed by the presence of less than 30 nodes (for both examined and positive) for grade 4 anaplastic. These findings were unexpected, considering the medians for 
+            regional examined and regional positive nodes hovered around 12-14 and 1-2 respectively (indicating the central tendency of distribution amongst patients diagnosed 
+            with the following grades of breast cancer). However, an outlier of 47 is observed for an anaplastic grade 4 regional examined node, indicating that the increased
+            presence of regional positive nodes do not necessarily correlate to higher grades. The following can further be explored via the interactive nature of the plot, 
+            which allows the user to hover over individual data points. These findings can help inform clinical decision-making, emphasizing the importance of thorough lymph 
+            node examination in higher-grade cancers and highlighting the role of lymph node positivity as a potential prognostic factor.
+
         </p>
 
         <div class = 'center'>
