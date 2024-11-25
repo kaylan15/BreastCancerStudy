@@ -87,6 +87,7 @@
             </table>
         </div>
 
+        <h3>Interactive Heatmap</h3>
 
             <div class = 'center'>
                 <iframe src="survival_by_grade_race_heatmap.html" width="80%" height="400px" frameborder="0"></iframe>
@@ -110,38 +111,33 @@
         
         <div class = 'container'>
             <div class = 'image'>
-                <!-- <iframe src="histogram/index.html" width="100%" height="400px" frameborder="0"></iframe>-->
                 <iframe src="survival_months_by_stage.svg" width="100%" height="400px" frameborder="0"></iframe>
             </div>
             <div class = 'text'>
                 <p>               
-
+                    This bar chart illustrates the average survival months for patients with breast cancer at different stages, as categorized in the dataset 
+                    (IIA, IIB, IIIA, IIIB, IIIC). The x-axis represents the cancer stage, while the y-axis shows the average number of months patients survived after diagnosis. 
+                    Each bar's height reflects the average survival time for that specific stage, and the colors are used to distinguish between the stages for better visualization. 
+                    The chart shows that as the cancer progresses, the average survival time consistently begins to decline. 
                 </p>
             </div>            
         </div>
         
         <h3>Survival Months by Race</h3>
 
-        <div class = 'container'>
-            <div class = 'text'>
-                <p>intto to visual
-                </p>
-                            <!--- description -->
-                <p>
-                   explanation
-                </p>
-            </div>
+             <div class = 'container'>
             <div class = 'image'>
-                <img src="survival_months_by_race.png" width="100%" height="500px" frameborder="0"></img>
-            </div>   
-        </div>
-
-        <p>
-        </p>
+                <img src="survival_months_by_race.png" width="100%" height="400px" frameborder="0"></img>
+            </div>
+            <div class = 'text'>
+            <p>
+                
+            </p>
 
         <div class = 'center'>
             <iframe src="scatter_plot.html" width="85%" height="550px" frameborder="0"></iframe>
         </div>
+
 
         <h3>Interactive Boxplot</h3>
 
@@ -157,27 +153,19 @@
 
         </p>
 
-        <div class = 'center'>
-            <iframe src="dist_reg_nodes_examined_pos_grade_boxplot.html" width="95%" height="300px" frameborder="0"></iframe>
-        </div>
 
         <h3>Summary and additional work</h3>
 
         <p>
-            In this visualization analysis, we try to explore the US 
-            unemployment rate across states. We also examine the relation
-            between unemployment rate and other social factors. 
-        </p>
-        <p>
-            Unfortunately, this is the 2010 data thus may be different 
-            than the current economics status. Also, unemployment rate 
-            may fluctuate seasonally thus adding a time series analysis
-            will be more informative. 
-        </p>
-
-        <p>If you are interested in the project and want to share more
-            opinions or resource about the project, please contact:
-            Xiaoyi Yang (xiaoy.yang@northeastern.edu)
+            Upon conducting a detailed analysis of the breast cancer dataset obtained, the following conclusions can potentially be drawn: (1) age is a significant factor that 
+            determines the diagnosis, or early and/or late onset of breast cancer, (2) different stages of cancer are equally fatal and do not drastically reduce the number of 
+            months that a patient can survive for, (3) black populations may potentially face a slight disadvantage of being able to survive only for a few more months, while 
+            other races may face a notable disadvantage of surviving no additional months under grade 4 breast cancer, (4) patients that identify as ‘white’ are more susceptible 
+            to being diagnosed with breast cancer, and last but not least, (5) breast cancer statistics are extremely distinct when considering multiple demographics and scientific 
+            attributes. As a result of the current findings obtained from the following data visualization project, future work may involve creating interactive dashboards that allow 
+            users to filter by factors like age, region, or cancer stage. Additionally, geospatial mapping could be used to show how incidence rates vary by location, and linking 
+            this with access to healthcare services could help identify disparities. Moreover, visualizing risk factors like genetics, lifestyle, and environmental exposure could 
+            provide insights into their role in breast cancer trends, along with working towards making breast cancer information more accessible to the general public.
         </p>
 
 </body>
