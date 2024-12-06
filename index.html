@@ -1,181 +1,216 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Breast Cancer Surival Study</title>
-    <link href="style.css" rel="stylesheet" />
+    <title>Breast Cancer Survival Study</title>
+    <style>
+        /* General Body Styling */
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #f8f9fa;
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        /* Style for Headers */
+        h1 {
+            font-size: 2.5em;
+            margin: 20px 0;
+            color: #333;
+        }
+
+        h3 {
+            font-size: 1.8em;
+            margin: 20px 0;
+            color: #555;
+        }
+
+        /* Content Box Styling */
+        .content-box {
+            background: #ffffff;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin: 20px;
+            padding: 20px;
+            width: 80%;
+            text-align: center;
+        }
+
+        /* Paragraph Styling */
+        .content-box p {
+            color: #666;
+            font-size: 1.1em;
+            margin: 10px 0;
+        }
+
+        /* Table Styling */
+        .tg {
+            margin: 20px auto;
+            border-collapse: collapse;
+            width: 90%;
+        }
+
+        .tg th, .tg td {
+            border: 1px solid #ddd;
+            padding: 12px;
+            text-align: center;
+        }
+
+        .tg th {
+            background-color: #f4f4f4;
+            font-weight: bold;
+            color: #333;
+        }
+
+        /* Styling for Iframes */
+        iframe {
+            display: block;
+            margin: 20px auto;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Container Styling for Visuals */
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+        }
+
+        /* Text Highlight Box */
+        .text, .image {
+            padding: 10px;
+            margin: 10px;
+        }
+
+        /* Footer or Summary Section */
+        .summary-box {
+            background-color: #f4f4f4;
+            border-radius: 8px;
+            padding: 20px;
+            width: 80%;
+            margin: 20px auto;
+            text-align: center;
+        }
+
+        .summary-box p {
+            color: #555;
+            font-size: 1.1em;
+        }
+    </style>
 </head>
 <body>
-    
-    <h1> Breast Cancer Surival Study</h1>
+    <h1>Breast Cancer Survival Study</h1>
 
-    <h3>Overall Introduction</h3>
+    <div class="content-box">
+        <h3>Overall Introduction</h3>
+        <p>
+            Amidst rapid globalization in today’s world, the need for processing and interpreting biological data has skyrocketed. More specifically, 
+            cancer (or oncology) research is a popular area of study, with significant funding provided by the government, charities, and private corporations. 
+            In 2020 alone, breast cancer became the most commonly diagnosed cancer worldwide, with over 2.2 million new cases reported. This study aims to analyze 
+            breast cancer trends and survival factors through data visualization.
+        </p>
+    </div>
 
-    <p> Amidst rapid globalization in today’s world, the need for processing and interpreting biological data has also skyrocketed. More specifically,
-        cancer (or oncology) research is a popular area of study, with significant funding being provided by the government, charities, and other corporations 
-        in the private sector. In 2020 alone, breast cancer became the most commonly diagnosed cancer worldwide, with over 2.2 million new cases being reported. 
-        Furthermore, according to the National Breast Cancer Foundation, about 1 in 8 women in the United States will be diagnosed with breast cancer in their lifetime. 
-        Although breast cancer can also affect men, it is more prevalent in women, making early detection and awareness crucial for increasing survival rates and reducing 
-        mortality rates. Considering the effects of genetics, lifestyle choices, early and/or late onset, and other demographics (such as race, age, and marital status), 
-        research in the following field can provide a plethora of insight regarding disease development, potential options for treatments, and methods to prevent the onset of 
-        cancer in the first place. Over the years, significant advancements in medical research have led to better treatment options, but challenges remain, particularly in 
-        lower-income regions where access to early screening and healthcare services is limited. By studying the potential risk factors associated with breast cancer, the main goal 
-        of our project is to provide different populations with the information they need to reduce their risk, and understanding the trends presented through data analysis 
-        (which can lead to future projects of interest).</p>
-
-   
-    <!-- added the variables just missing the writing portion of the data set -->
-
-    <h3>Introduction to the data</h3>
-
-    <p> The dataset, titled “Breast Cancer” and obtained from Kaggle, includes approximately 4024 rows of breast cancer related information, 
-        with each feature representing a different aspect that may have an effect on breast cancer diagnosis and survival. Additionally, 
-        the data set contains 16 distinct attributes, which include:</p>  
-
-        <div class="center">
+    <div class="content-box">
+        <h3>Introduction to the Data</h3>
+        <p>
+            The dataset, titled “Breast Cancer” and obtained from Kaggle, includes approximately 4024 rows of breast cancer-related information. It contains 16 attributes 
+            representing aspects that may affect breast cancer diagnosis and survival. The table below summarizes these variables:
+        </p>
+        
         <table class="tg">
             <thead>
-              <tr>
-                <th class="tg-0lax">Variable Name</th>
-                <th class="tg-0lax">Details</th>
-              </tr>
+                <tr>
+                    <th>Variable Name</th>
+                    <th>Details</th>
+                </tr>
             </thead>
             <tbody>
-              <tr>
-                <td class="tg-0lax">Age</td>
-                <td class="tg-0lax">Age number</td>
-              </tr>
-              <tr>
-                <td class="tg-0lax">Race</td>
-                <td class="tg-0lax">Race(White , Black , Other)</td>
-              </tr>
-              <tr>
-                <td class="tg-0lax">Marital_status</td>
-                <td class="tg-0lax">Marital status(Married , Single, Other)</td>
-              </tr>
-              <tr>
-                <td class="tg-0lax">T_Stage</td>
-                <td class="tg-0lax">Indicate increasing size and/or extent of the tumor</td>
-              </tr>
-              <tr>
-                <td class="tg-0lax">N_Stage</td>
-                <td class="tg-0lax">Describes whether the cancer has spread to nearby and how extensively</td>
-              </tr>
-              <tr>
-                <td class="tg-0lax">6th_Stage</td>
-                <td class="tg-0lax">Breast Adjusted AJCC 6th Stage</td>
-              </tr>
-              <tr>
-                <td class="tg-0lax">Differentiate</td>
-                <td class="tg-0lax">The difference</td>
-              </tr>
-              <tr>
-                <td class="tg-0lax">Grade</td>
-                <td class="tg-0lax">Grade Score based on their differentiation</td>
-              </tr>
-              <tr>
-                <td class="tg-0lax">A Stage</td>
-                <td class="tg-0lax">Regional — A neoplasm that has extended, Distant — A neoplasm that has spread to parts of the body remote from</td>
-              </tr>
-              <tr>
-                <td class="tg-0lax">Tumor_Size</td>
-                <td class="tg-0lax">Each indicates exact size in millimeters</td>
-              </tr>
+                <tr>
+                    <td>Age</td>
+                    <td>Age number</td>
+                </tr>
+                <tr>
+                    <td>Race</td>
+                    <td>Race (White, Black, Other)</td>
+                </tr>
+                <tr>
+                    <td>Marital_status</td>
+                    <td>Marital status (Married, Single, Other)</td>
+                </tr>
+                <tr>
+                    <td>T_Stage</td>
+                    <td>Indicates increasing size and/or extent of the tumor</td>
+                </tr>
+                <tr>
+                    <td>N_Stage</td>
+                    <td>Describes whether the cancer has spread to nearby areas and how extensively</td>
+                </tr>
+                <tr>
+                    <td>6th_Stage</td>
+                    <td>Breast Adjusted AJCC 6th Stage</td>
+                </tr>
+                <tr>
+                    <td>Differentiate</td>
+                    <td>The degree of cellular differentiation</td>
+                </tr>
+                <tr>
+                    <td>Grade</td>
+                    <td>Grade score based on cellular differentiation</td>
+                </tr>
+                <tr>
+                    <td>A_Stage</td>
+                    <td>Regional or distant neoplasm spread</td>
+                </tr>
+                <tr>
+                    <td>Tumor_Size</td>
+                    <td>Exact size of the tumor in millimeters</td>
+                </tr>
             </tbody>
-            </table>
-        </div>
+        </table>
+    </div>
 
+    <div class="content-box">
         <h3>Interactive Heatmap</h3>
+        <iframe src="survival_by_grade_race_heatmap.html" width="80%" height="400px" frameborder="0"></iframe>
+        <p>
+            The interactive heatmap shows survival trends based on grade and race. For example, discrepancies in survival outcomes appear in grade 4 data, where 
+            significant differences exist across racial groups. White patients report a higher survival rate (~67 months) compared to Black patients (~49 months).
+        </p>
+    </div>
 
-            <div class = 'center'>
-                <iframe src="survival_by_grade_race_heatmap.html" width="80%" height="400px" frameborder="0"></iframe>
-            </div>
-            
-            <p>
-                The interactive heatmap for survival, race, and grade provides valuable insights into the relationship between these variables and the survival outcomes of 
-                breast cancer patients. By visualizing how survival months correlate with different races and grades, potential trends in the survival outcomes based on the 
-                severity of the cancer (as indicated by grade) and racial groups can be observed. For instance, the heatmap might reveal that patients with higher-grade cancers 
-                tend to have shorter survival times, while differences in survival could emerge across racial groups, possibly reflecting variations in access to healthcare, 
-                genetic factors, or other socio-economic influences. The interactivity allows users to filter by grade or race, enabling a deeper exploration of these patterns, 
-                and could highlight outliers or clusters that require further investigation. Based on the visualization provided, it is evident that a majority of patients 
-                (diagnosed with breast cancer in grades 1, 2, or 3) have higher survival rates (ranging from 60 to 70 months after diagnosis). Furthermore, discrepancies begin 
-                to appear in grade 4 data, where patients that do not identify as black or white only report about 0 survival months. The significant difference in data is 
-                followed by white patients surviving nearly 67 months, while black patients survive for approximately 49 months after diagnosis. These findings may prompt 
-                further clinical research into the impact of race and grade on survival, in order to develop more personalized forms of treatment for patients.
-
-            </p>
-
+    <div class="content-box">
         <h3>Survival Months by Stage</h3>
-        <div class = 'container'>
-            <div class = 'image'>
-                <iframe src="survival_months_by_stage.svg" width="100%" height="400px" frameborder="0"></iframe>
-            </div>
-            <div class = 'text'>
-                <p>               
-                    This bar chart illustrates the average survival months for patients with breast cancer at different stages, as categorized in the dataset 
-                    (IIA, IIB, IIIA, IIIB, IIIC). The x-axis represents the cancer stage, while the y-axis shows the average number of months patients survived after diagnosis. 
-                    Each bar's height reflects the average survival time for that specific stage, and the colors are used to distinguish between the stages for better visualization. 
-                    The chart shows that as the cancer progresses, the average survival time consistently begins to decline. 
-                </p>
-            </div>            
-        </div>
-    
-        <h3>Survival Months by Race</h3>
-        <div class = 'container'>
-            <div class = 'image'>
-                <iframe src="survival_months_by_race.png" width="100%" height="400px" frameborder="0"></iframe>
-            </div>
-            <div class = 'text'>
-                <p>     
-                </p>
-            </div>          
-        </div>
-
-          <h3>Case by Race</h3>
-        <div class = 'container'>
-            <div class = 'image'>
-                <iframe src="cases_by_race.svg " width="100%" height="400px" frameborder="0"></iframe>
-            </div>
-            
-            <div class = 'text'>
-                <p>      This bar chart represents the total number of breast cancer cases categorized by race. The x-axis indicates the race categories (White, Other, and Black) while the y-axis shows the total number of cases. This visualization shows a significant disparity in the distribution of cases among racial groups, with white people comprising the majority of recorded cases in this dataset. However, it is important to consider external factors such as where the data was collected and the race distribution in that area, healthcare access, and other factors that may influence this distribution. It is a bad conclusion to say that white people are more susceptible to breast cancer, as previously mentioned, the data collected on race may be skewed. 
-                </p>
-            </div>          
-        </div>
-
-        <h3>Interactive Boxplot</h3>
-             <div class = 'center'>
-            <iframe src="dist_reg_nodes_examined_pos_grade_boxplot.html" width="85%" height="550px" frameborder="0"></iframe>
-        </div>
-
+        <iframe src="survival_months_by_stage.svg" width="100%" height="400px" frameborder="0"></iframe>
         <p>
-            The interactive box plot comparing regional nodes examined and regional nodes positive across different grades provides significant insights into how lymph node 
-            involvement relates to tumor grade. Based on the box plot provided, the presence of a greater number of examined regional nodes (for grades 2 and 3) is fairly evident, 
-            followed by the presence of less than 30 nodes (for both examined and positive) for grade 4 anaplastic. These findings were unexpected, considering the medians for 
-            regional examined and regional positive nodes hovered around 12-14 and 1-2 respectively (indicating the central tendency of distribution amongst patients diagnosed 
-            with the following grades of breast cancer). However, an outlier of 47 is observed for an anaplastic grade 4 regional examined node, indicating that the increased
-            presence of regional positive nodes do not necessarily correlate to higher grades. The following can further be explored via the interactive nature of the plot, 
-            which allows the user to hover over individual data points. These findings can help inform clinical decision-making, emphasizing the importance of thorough lymph 
-            node examination in higher-grade cancers and highlighting the role of lymph node positivity as a potential prognostic factor.
-
+            This bar chart shows that as the cancer stage progresses (e.g., IIA to IIIC), average survival months consistently decline, emphasizing the importance of early detection.
         </p>
+    </div>
 
-
-        <h3>Summary and additional work</h3>
-
+    <div class="content-box">
+        <h3>Cases by Race</h3>
+        <iframe src="cases_by_race.svg" width="100%" height="400px" frameborder="0"></iframe>
         <p>
-            Upon conducting a detailed analysis of the breast cancer dataset obtained, the following conclusions can potentially be drawn: (1) age is a significant factor that 
-            determines the diagnosis, or early and/or late onset of breast cancer, (2) different stages of cancer are equally fatal and do not drastically reduce the number of 
-            months that a patient can survive for, (3) black populations may potentially face a slight disadvantage of being able to survive only for a few more months, while 
-            other races may face a notable disadvantage of surviving no additional months under grade 4 breast cancer, (4) patients that identify as ‘white’ are more susceptible 
-            to being diagnosed with breast cancer, and last but not least, (5) breast cancer statistics are extremely distinct when considering multiple demographics and scientific 
-            attributes. As a result of the current findings obtained from the following data visualization project, future work may involve creating interactive dashboards that allow 
-            users to filter by factors like age, region, or cancer stage. Additionally, geospatial mapping could be used to show how incidence rates vary by location, and linking 
-            this with access to healthcare services could help identify disparities. Moreover, visualizing risk factors like genetics, lifestyle, and environmental exposure could 
-            provide insights into their role in breast cancer trends, along with working towards making breast cancer information more accessible to the general public.
+            This bar chart represents the total number of breast cancer cases by race. White patients comprise the majority in this dataset. However, this may reflect collection 
+            biases rather than higher susceptibility.
         </p>
+    </div>
 
+    <div class="summary-box">
+        <h3>Summary and Additional Work</h3>
+        <p>
+            The analysis reveals age, stage, and racial factors significantly impact survival outcomes. Future work could include creating interactive dashboards to explore 
+            geospatial trends and risk factors, making breast cancer data more accessible and actionable for diverse audiences.
+        </p>
+    </div>
 </body>
 </html>
