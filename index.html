@@ -62,7 +62,9 @@
 </head>
 <body>
 
-    <h1>Breast Cancer Survival Study</h1>
+    <h1> Analyzing the Factors that Influence Breast Cancer Survival </h1>
+    <h2> Central Question: How do different factors affect the survival of an individual diagnosed with breast cancer? </h2>
+    <h2> Dylan Kao, Kayla Nguyen, Havisha Neelamraju, Raul Sivaneindiren </h2>
 
     <h3>Overall Introduction</h3>
     <p> Amidst rapid globalization in today’s world, the need for processing and interpreting biological data has also skyrocketed. More specifically,
@@ -77,10 +79,12 @@
         of our project is to provide different populations with the information they need to reduce their risk, and understanding the trends presented through data analysis 
         (which can lead to future projects of interest).</p>
 
-    <h3>Introduction to the data</h3>
+    <h3>Introduction to the Data</h3>
     <p>
     The dataset, titled <a href="https://www.kaggle.com/datasets/reihanenamdari/breast-cancer" target="_blank">“Breast Cancer”</a> and obtained from Kaggle, 
     includes approximately 4024 rows of breast cancer-related information, with each feature representing a different aspect that may have an effect on breast cancer diagnosis and survival.
+    With 10 attributes in the given dataset, a few particular ones of interest include: (1) age, (2) race, (3) grade, and (4) the different types of cancerous stages (i.e. T, N, or A) would
+    allow data scientists and users to identify trends in the data, in addition to understanding the distinct factors that play into the onset and survival of cancer.
 </p>
 
 
@@ -138,6 +142,12 @@
         </table>
     </div>
 
+    <h3> Data Resources and References </h3>
+    <p>
+    <a href="https://www.researchgate.net/profile/Manal-Abdullah-2/publication/337854774_Real_time_data_analysis_and_visualization_for_the_breast_cancer_disease/links/60213d0f45851589398c9dd6/Real-time-data-analysis-and-visualization-for-the-breast-cancer-disease.pdf?_sg%5B0%5D=started_experiment_milestone&origin=journalDetail" target="_blank">“Real Time Study & Data Analysis on Breast Cancer Data”</a>
+    <a> href="https://publichealth.jmir.org/2018/2/e42" target="_blank">“Using Data Visualization to Improve Breast Cancer Survival Estimates”</a>
+</p>
+    
     <h3>Survival by Grade and Race</h3>
 <div class="center">
     <iframe src="avg_survival_by_grade_race_heatmap.html" width="80%" height="400px" frameborder="0"></iframe>
@@ -155,12 +165,12 @@
     followed by white patients surviving nearly 67 months, while black patients survive for approximately 49 months after diagnosis. These findings may prompt 
     further clinical research into the impact of race and grade on survival, in order to develop more personalized forms of treatment for patients.
 </p>
-
+    
 
   <h3>Survival Months by Stage</h3>
 <div class="container">
     <div class="image">
-        <iframe src="survival_months_by_stage.svg" width="100%" height="400px" frameborder="0"></iframe>
+        <iframe src="survival_months_by_stage.svg" width="400px" height="400px" frameborder="0"></iframe>
     </div>
     <div class="text">
         <p>This line plot illustrates the average survival months for patients with breast cancer at different stages, as categorized in the dataset 
@@ -174,17 +184,17 @@
     <h3>Survival Months by Race</h3>
     <div class="container">
         <div class="image">
-            <iframe src="survival_months_by_race.png" width="100%" height="400px" frameborder="0"></iframe>
+            <iframe src="survival_months_by_race.png" width="400px" height="400px" frameborder="0"></iframe>
         </div>
         <div class="text">
-            <p>More information about survival by race can be detailed here...</p>
+            <p> More information about survival by race can be detailed here...</p>
         </div>          
     </div>
 
     <h3>Case by Race</h3>
 <div class="container">
     <div class="image">
-        <iframe src="cases_by_race.svg" width="100%" height="400px" frameborder="0"></iframe>
+        <iframe src="cases_by_race.svg" width="400px" height="400px" frameborder="0"></iframe>
     </div>
     <div class="text">
         <p>This bar chart represents the total number of breast cancer cases categorized by race. The x-axis indicates the race categories (White, Other, and Black) while the y-axis 
@@ -195,6 +205,21 @@
     </div>          
 </div>
 
+
+    <h3>Survival based on Tumor Size</h3>
+<div class="center">
+    <iframe src="scatter_plot.html" width="80%" height="400px" frameborder="0"></iframe>
+</div>
+
+<p>
+    The interactive scatter plot visualizes the relationship between tumor size and survival months, categorized by race (White, Black, Other)
+    using color-coded data points. Generally, smaller tumor sizes are associated with longer survival months, indicating an inverse relationship,
+    though some notable outliers exist. For example, individuals with large tumors occasionally display unexpectedly long survival periods, while
+    some with smaller tumors have shorter survival spans. While the color coding highlights racial groups, no clear clustering or significant differences
+    in the tumor size-survival relationship among races are immediately apparent. The plot's interactive features, such as dynamic filtering of tumor sizes
+    and tooltips displaying additional details like age, provide deeper insights into the dataset and allow for exploration of anomalies and trends.
+</p>
+    
 
     <h3>Distribution of Regional Nodes Examined and Positive by Grade</h3></h3>
 <div class="center">
